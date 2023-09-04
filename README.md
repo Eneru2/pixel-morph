@@ -11,6 +11,11 @@ Some of its features are:
 
 <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/323177892/original/3847d47013299cce4970a6c881067a248f008ba4/create-a-cross-platform-desktop-application-for-you.png">
 
+Install from package
+-------------------
+Pre-built packages for Windows, macOS, and Linux are found on the
+[Releases](https://github.com/Eneru2/pixel-morph/releases/) page.
+
 Install from source
 -------------------
 You need to clone the repository:
