@@ -2,15 +2,14 @@
   <img src="https://github.com/Eneru2/pixel-morph/blob/main/pixel_morph_logo.png" alt="Pixel Morph">
 </h1>
 
-Pixel Morph
------------
-<img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/323177892/original/3847d47013299cce4970a6c881067a248f008ba4/create-a-cross-platform-desktop-application-for-you.png">
 Pixel Morph is an image converter created with Electron that allows you to convert any kind of BASE64 image to png, jpeg and webp.<br> 
 Some of its features are:
 
 - Bulk conversion
 - Drag-and-drop files
 - Beautiful design
+
+<img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/323177892/original/3847d47013299cce4970a6c881067a248f008ba4/create-a-cross-platform-desktop-application-for-you.png">
 
 Install from source
 -------------------
