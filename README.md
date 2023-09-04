@@ -11,12 +11,16 @@ Some features are:
 Install from source
 -------------------
 You need to clone the repository:
+
   git clone https://github.com/Eneru2/pixel-morph
 
-You will need [npm](https://nodejs.org/en/download) in case you don't have it, and run the following commands:
+You will need [npm](https://nodejs.org/en/download) in case you don't have it. 
+Then run the following commands after cloning:
+
   cd pixel-morph
   npm install
   npm run make
+  
 After that you will have the executable file corresponding to your OS and architecture.
 
 Future of the project
