@@ -1,1 +1,211 @@
-const a0_0xd87c45=a0_0x2174;(function(_0x452a83,_0x281fd2){const _0x19883f=a0_0x2174,_0x4a4aac=_0x452a83();while(!![]){try{const _0x54ef9d=parseInt(_0x19883f(0x1aa))/0x1*(-parseInt(_0x19883f(0x1d6))/0x2)+parseInt(_0x19883f(0x1a3))/0x3*(-parseInt(_0x19883f(0x1c8))/0x4)+parseInt(_0x19883f(0x1cf))/0x5+-parseInt(_0x19883f(0x1d2))/0x6+parseInt(_0x19883f(0x1d8))/0x7+parseInt(_0x19883f(0x1b1))/0x8+parseInt(_0x19883f(0x1ac))/0x9;if(_0x54ef9d===_0x281fd2)break;else _0x4a4aac['push'](_0x4a4aac['shift']());}catch(_0x2ee964){_0x4a4aac['push'](_0x4a4aac['shift']());}}}(a0_0x3829,0xa5333));const {app,BrowserWindow,ipcMain,dialog}=require(a0_0xd87c45(0x1bc)),path=require(a0_0xd87c45(0x1c5)),fs=require('fs'),express=require('express'),render=express(),{shell}=require(a0_0xd87c45(0x1bc));let win;async function createWindow(){const _0x73afbc=a0_0xd87c45;win=new BrowserWindow({'width':0x500,'height':0x2d0,'resizable':![],'autoHideMenuBar':!![],'frame':![],'transparent':!![],'icon':path['join'](__dirname,_0x73afbc(0x1d4)),'webPreferences':{'nodeIntegration':![],'contextIsolation':!![],'preload':path[_0x73afbc(0x1ab)](__dirname,_0x73afbc(0x1bf))}}),win['loadURL'](_0x73afbc(0x1b7)),win[_0x73afbc(0x1d7)][_0x73afbc(0x1de)](({url:_0x498264})=>{const _0x41a222=_0x73afbc;return shell[_0x41a222(0x19e)](_0x498264),{'action':'deny'};});}app['on']('ready',createWindow),render[a0_0xd87c45(0x1a2)](a0_0xd87c45(0x1bb),path[a0_0xd87c45(0x1ab)](__dirname,a0_0xd87c45(0x1b2))),render[a0_0xd87c45(0x1a2)]('view\x20engine',a0_0xd87c45(0x1a5)),render[a0_0xd87c45(0x1a4)](express[a0_0xd87c45(0x1d5)]('./')),render[a0_0xd87c45(0x1ca)]('/',(_0x1a1365,_0x14b235)=>{const _0x4a3f0d=a0_0xd87c45;_0x14b235[_0x4a3f0d(0x1ba)]('app');}),console['log']('configconfig.json');let config={};function loadConfig(){const _0x3b0b5b=a0_0xd87c45;try{const _0x4e79eb=fs[_0x3b0b5b(0x1b9)](_0x3b0b5b(0x1ce));config=JSON['parse'](_0x4e79eb);}catch(_0x4c64f1){console[_0x3b0b5b(0x1b8)]('Error\x20loading\x20config\x20file:',_0x4c64f1);}}function saveConfig(){const _0x28ec3d=a0_0xd87c45;fs['writeFileSync'](_0x28ec3d(0x1ce),JSON[_0x28ec3d(0x1a6)](config,null,0x2),_0x28ec3d(0x1b5));}ipcMain['handle'](a0_0xd87c45(0x1ae),async _0x545219=>{const _0x24e85d=a0_0xd87c45,_0x28e4e3=await dialog[_0x24e85d(0x1a1)]({'properties':[_0x24e85d(0x1c0)]});if(!_0x28e4e3[_0x24e85d(0x1c1)]&&_0x28e4e3[_0x24e85d(0x1bd)][_0x24e85d(0x1d1)]>0x0){const _0x129852=_0x28e4e3[_0x24e85d(0x1bd)][0x0];return _0x129852;}else return null;}),render[a0_0xd87c45(0x1cb)](a0_0xd87c45(0x1ad),express['json'](),(_0x3e48cd,_0x3ab1f6)=>{const _0x2e013e=a0_0xd87c45,{folderPath:_0x1de446}=_0x3e48cd['body'];config[_0x2e013e(0x1c3)]=_0x1de446,saveConfig(),_0x3ab1f6[_0x2e013e(0x1b6)]({'success':!![]}),console[_0x2e013e(0x1cc)](_0x2e013e(0x1a7));}),render['put'](a0_0xd87c45(0x1b4),express[a0_0xd87c45(0x1b6)](),(_0x5d7ae9,_0x1f1b90)=>{const _0x4dfe72=a0_0xd87c45,{autoDownloadEnabled:_0x401bec}=_0x5d7ae9[_0x4dfe72(0x1c6)];config[_0x4dfe72(0x1be)]=_0x401bec,saveConfig(),_0x1f1b90[_0x4dfe72(0x1b6)]({'success':!![]});}),ipcMain[a0_0xd87c45(0x1c4)](a0_0xd87c45(0x1d3),async(_0x30fa31,{autoDownloadEnabled:_0x59449})=>{const _0xaf6de4=a0_0xd87c45;try{return await updateAutoDownloadSetting(_0x59449),{'success':!![]};}catch(_0x4264c3){console[_0xaf6de4(0x1b8)](_0xaf6de4(0x1d9),_0x4264c3);throw _0x4264c3;}}),ipcMain['on']('window:minimize',()=>{const _0x29aa7e=a0_0xd87c45;win[_0x29aa7e(0x1b0)]();}),ipcMain[a0_0xd87c45(0x1c4)](a0_0xd87c45(0x1dd),()=>{const _0x19bc37=a0_0xd87c45;window[_0x19bc37(0x1db)]();}),ipcMain[a0_0xd87c45(0x1c4)]('window:restore',()=>{const _0x23d369=a0_0xd87c45;window[_0x23d369(0x1b3)]();}),ipcMain[a0_0xd87c45(0x1c4)](a0_0xd87c45(0x1a8),()=>{const _0x80e803=a0_0xd87c45;window[_0x80e803(0x19f)]();});async function updateAutoDownloadSetting(_0x2f93d2){const _0x52866b=a0_0xd87c45;try{return config[_0x52866b(0x1be)]=_0x2f93d2,saveConfig(),{'success':!![]};}catch(_0x50a384){console[_0x52866b(0x1b8)](_0x52866b(0x1d9),_0x50a384);throw _0x50a384;}}loadConfig(),ipcMain['on'](a0_0xd87c45(0x1da),async(_0xcf9bc9,_0x2dd16f)=>{const _0x24539b=a0_0xd87c45,{fileName:_0x48f322,imageDataURL:_0x298ff7}=_0x2dd16f,_0x13e086=path['join'](config[_0x24539b(0x1c3)],_0x48f322);try{const _0xaaf684=Buffer[_0x24539b(0x1af)](_0x298ff7[_0x24539b(0x1dc)](/^data:image\/\w+;base64,/,''),_0x24539b(0x1c2));fs[_0x24539b(0x1a0)](_0x13e086,_0xaaf684),console['log'](_0x24539b(0x19d)),_0xcf9bc9[_0x24539b(0x1d0)](_0x24539b(0x1c7),null);}catch(_0x914908){console[_0x24539b(0x1b8)]('Error\x20downloading\x20file:',_0x914908),_0xcf9bc9[_0x24539b(0x1d0)](_0x24539b(0x1c7),_0x914908['message']);}});function a0_0x2174(_0x29a5ee,_0x1c4f8f){const _0x382901=a0_0x3829();return a0_0x2174=function(_0x21744c,_0x32822b){_0x21744c=_0x21744c-0x19d;let _0x3f5626=_0x382901[_0x21744c];return _0x3f5626;},a0_0x2174(_0x29a5ee,_0x1c4f8f);}function readAutoDownloadSetting(){const _0x3416c8=a0_0xd87c45,_0x51fd14=fs[_0x3416c8(0x1b9)](_0x3416c8(0x1ce),'utf-8'),_0x3202da=JSON['parse'](_0x51fd14);return _0x3202da[_0x3416c8(0x1be)];}function a0_0x3829(){const _0x3506b5=['3326166ymqIZH','auto-download','../icons/icon.ico','static','2hBFRfI','webContents','6736688fWqAYF','Error\x20updating\x20auto\x20download\x20setting:','download-file','maximize','replace','window:maximize','setWindowOpenHandler','File\x20downloaded\x20successfully.','openExternal','close','writeFileSync','showOpenDialog','set','3kDjkNL','use','ejs','stringify','successfully','window:close','Server\x20is\x20listening\x20on\x20port\x20','628467BIDdOa','join','6668082lPzivv','/folder-path','open-folder-dialog','from','minimize','5416504WIhsuR','../src/','restore','/auto-download','utf-8','json','http://localhost:4050/','error','readFileSync','render','views','electron','filePaths','autoDownloadEnabled','preload.js','openDirectory','canceled','base64','folderPath','handle','path','body','download-file-complete','3042924AIKbXB','listen','get','put','log','getFolderPath','configconfig.json','1199365TkyQXm','reply','length'];a0_0x3829=function(){return _0x3506b5;};return a0_0x3829();}ipcMain[a0_0xd87c45(0x1c4)]('getAutoDownloadSetting',_0x24c477=>{const _0x183d42=readAutoDownloadSetting();return _0x183d42;}),ipcMain[a0_0xd87c45(0x1c4)](a0_0xd87c45(0x1cd),()=>{const _0x975a3c=a0_0xd87c45;return config[_0x975a3c(0x1c3)];});const port=0xfd2;render[a0_0xd87c45(0x1c9)](port,()=>{const _0x4e695b=a0_0xd87c45;console['log'](_0x4e695b(0x1a9)+port);});
+const {
+  app,
+  BrowserWindow,
+  ipcMain,
+  dialog
+} = require("electron");
+const path = require("path");
+const fs = require("fs");
+const express = require('express');
+const render = express();
+const { shell } = require('electron');
+
+
+// Keep a global reference of the window object, if you don't, the window will
+// be closed automatically when the JavaScript object is garbage collected.
+let win;
+
+async function createWindow() {
+
+  // Create the browser window.
+  win = new BrowserWindow({
+    width: 1280,
+    height: 720,
+    resizable: false,
+    autoHideMenuBar: true,
+    frame: false,
+    transparent: true,
+    icon: path.join(__dirname, '../icons/icon.ico'),
+    webPreferences: {
+      nodeIntegration: false, // is default value after Electron v5
+      contextIsolation: true, // protect against prototype pollution // turn off remote
+      preload: path.join(__dirname, "preload.js") // use a preload script
+    }
+  });
+
+  // Load app
+  win.loadURL("http://localhost:4050/");
+
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    shell.openExternal(url);
+    return { action: 'deny' };
+  });
+}
+
+
+app.on("ready", createWindow);
+
+render.set('views', (path.join(__dirname, "../src/")));
+render.set('view engine', 'ejs');
+render.use(express.static('./'));
+
+
+render.get('/', (req, res) => {
+  res.render('app');
+});
+// Define routes
+
+
+// Load configuration from JSON file
+let config = {};
+
+console.log('\resources\app.asar\config\config.json');
+
+function loadConfig() {
+  try {
+    const configFile = fs.readFileSync('\resources\app.asar\config\config.json');
+    config = JSON.parse(configFile);
+    // Set default value for autoDownloadEnabled if it doesn't exist in the config
+  } catch (err) {
+    console.error('Error loading config file:', err);
+  }
+}
+
+
+// Save configuration to JSON file
+function saveConfig() {
+  fs.writeFileSync('\resources\app.asar\config\config.json', JSON.stringify(config, null, 2), 'utf-8');
+}
+
+// Handle open-folder-dialog event from renderer process
+ipcMain.handle('open-folder-dialog', async (event) => {
+  const result = await dialog.showOpenDialog({
+    properties: ['openDirectory']
+  });
+
+  if (!result.canceled && result.filePaths.length > 0) {
+    const folderPath = result.filePaths[0];
+    return folderPath;
+  } else {
+    return null;
+  }
+});
+
+// Endpoint to update the folder path
+render.put('/folder-path', express.json(), (req, res) => {
+  const { folderPath } = req.body;
+  config.folderPath = folderPath;
+
+  // Save updated configuration to JSON file
+  saveConfig();
+
+  res.json({ success: true });
+  console.log('successfully');
+});
+
+render.put('/auto-download', express.json(), (req, res) => {
+  const { autoDownloadEnabled } = req.body;
+  config.autoDownloadEnabled = autoDownloadEnabled;
+
+  // Save updated configuration to JSON file
+  saveConfig();
+
+  res.json({ success: true });
+  
+});
+
+ipcMain.handle('auto-download', async (event, { autoDownloadEnabled }) => {
+  try {
+    await updateAutoDownloadSetting(autoDownloadEnabled);
+    return { success: true };
+  } catch (error) {
+    console.error('Error updating auto download setting:', error);
+    throw error;
+  }
+});
+
+ipcMain.on('window:minimize', () => {
+  win.minimize();
+})
+
+ipcMain.handle('window:maximize', () => {
+  window.maximize();
+})
+
+ipcMain.handle('window:restore', () => {
+  window.restore();
+})
+
+ipcMain.handle('window:close', () => {
+  window.close();
+})
+
+// Function to update the auto download setting
+async function updateAutoDownloadSetting(autoDownloadEnabled) {
+  try {
+    // Update the auto download setting in the configuration object
+    config.autoDownloadEnabled = autoDownloadEnabled;
+
+    // Save the updated configuration to the JSON file
+    saveConfig();
+
+    // Return a success response
+    return { success: true };
+  } catch (error) {
+    // Handle any errors that occur during the update process
+    console.error('Error updating auto download setting:', error);
+    throw error;
+  }
+}
+
+// Load the initial configuration
+loadConfig();
+
+// Handle file download request from the renderer process
+ipcMain.on('download-file', async (event, fileData) => {
+  const { fileName, imageDataURL } = fileData;
+  const savePath = path.join(config.folderPath, fileName);
+
+  try {
+    const buffer = Buffer.from(imageDataURL.replace(/^data:image\/\w+;base64,/, ''), 'base64');
+    fs.writeFileSync(savePath, buffer);
+    console.log('File downloaded successfully.');
+
+    event.reply('download-file-complete', null); // Send success response to the renderer process
+  } catch (error) {
+    console.error('Error downloading file:', error);
+
+    event.reply('download-file-complete', error.message); // Send error response to the renderer process
+  }
+});
+
+function readAutoDownloadSetting() {
+  // Read the configuration from the config.json file
+  const configData = fs.readFileSync('\resources\app.asar\config\config.json', 'utf-8');
+  const config = JSON.parse(configData);
+
+  // Return the autoDownloadEnabled value
+  return config.autoDownloadEnabled;
+}
+
+ipcMain.handle('getAutoDownloadSetting', (event) => {
+  // Read the autoDownloadEnabled value from storage (e.g., config.json)
+  const autoDownloadEnabled = readAutoDownloadSetting();
+
+  // Return the value to the renderer process
+  return autoDownloadEnabled;
+});
+
+ipcMain.handle('getFolderPath', () => {
+  return config.folderPath;
+});
+
+
+
+// Start the server
+const port = 4050;
+ // Choose the desired port number
+render.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});
+
