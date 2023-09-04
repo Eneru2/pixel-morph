@@ -3,5 +3,5 @@
 </h1>
 Pixel Morph an image converter created with electron to allow you to convert any kind of BASE64 file to png, jpeg and webp. 
 Some other features are:
-- Bulk convertion
-- Drag-and-drop
+<br>- Bulk convertion
+<br>- Drag-and-drop
